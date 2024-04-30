@@ -23,3 +23,23 @@ p {
     border-radius: 15px;
     font-family: "Open Sans", sans-serif;
 }
+@media (max-width: 500px) {
+    .wrapper {
+        width: 300px;
+    }
+    .wrapper h1 {
+        font-size: 25px;
+    }
+    hr {
+        width: 260px;
+    }
+    .buttonWrapper {
+        margin-top: 35px;
+    }
+    .btn {
+        font-size: 18px;
+    }
+    p {
+        font-size: 16px;
+    }
+}
