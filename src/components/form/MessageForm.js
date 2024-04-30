@@ -10,6 +10,8 @@ function MessageForm() {
         message: ""
     });
 
+    const [isPending, setIsPending] = useState(false)
+
     const navigate = useNavigate()
 
     const handleChange = (e) => {
@@ -23,15 +25,18 @@ function MessageForm() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        setIsPending(true)
 
         submitAnswer(formData)
         .then(data => {
             console.log("Data sumbmitted React", data);
-            navigate("/submitted")
+            setIsPending(false);
+            navigate("/submitted");
 
         })
         .catch(err => {
             console.log('react Failed to submit form:', err);
+            setIsPending(false);
         })
     }
 
@@ -70,7 +75,7 @@ function MessageForm() {
                     ></textarea>
                 </div>
                 <div className={styles.buttonWrapper}>
-                    <button type="submit" className={styles.btn}>Submit</button>
+                    <button type="submit" className={styles.btn}>{isPending ? "Sending..." : "Submit"}</button>
                 </div>
             </form>
         </section>
