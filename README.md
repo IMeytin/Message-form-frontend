@@ -1,12 +1,11 @@
 # Message Form Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+This project implements a simple message submission form with a full-stack setup. It consists of a frontend component that allows users to submit messages and a backend service that processes and stores these messages in a MongoDB database. The frontend also includes a page that displays a confirmation message once the form data has been successfully submitted.
 
-In the project directory, you can run:
-
-### `npm start`
+### `View Project`
+You can view the deployed project here:`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
